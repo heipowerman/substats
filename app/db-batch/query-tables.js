@@ -4,7 +4,7 @@
  * @Date: 2022-08-05 11:15:38
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-18 15:12:18
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 let webconfig = require("../../webconfig");

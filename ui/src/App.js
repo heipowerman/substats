@@ -4,7 +4,7 @@
  * @Date: 2022-07-12 11:21:36
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-10 15:46:29
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 /*
@@ -13,7 +13,7 @@
  * @Date: 2022-07-12 11:21:36
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-07-27 11:52:52
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";

@@ -2,9 +2,9 @@
  * @Description:
  * @Autor: fage
  * @Date: 2022-07-11 20:07:29
- * @LastEditors: chenbinfa
- * @LastEditTime: 2022-08-18 16:33:41
- * @description: 描述信息
+ * @LastEditors: lanmeng656 cbf0311@sina.com
+ * @LastEditTime: 2022-10-11 17:09:18
+ * @description: about
  * @author: chenbinfa
  */
 let chainHelper = require("../util/chain-helper");
@@ -19,7 +19,7 @@ async function main() {
     api.rpc.chain.subscribeNewHeads(async (header) => {
       try {
         const blockHeight = header.number.toNumber();
-        // console.log("blockHeight", blockHeight);
+        console.log("blockHeight", blockHeight);
         const blockInfo = await chainHelper.getBlockInfo(api, blockHeight);
         send("blockInfo", "ok", blockInfo);
       } catch (e2) {
@@ -38,7 +38,7 @@ async function main() {
 }
 function send(apiName, msg, data) {
   const clientList = global.wsClientList;
-  if (clientList.length == 0) return;
+  if (!clientList || clientList.length == 0) return;
   json = JSON.stringify({ apiName, msg, data });
   clientList.forEach((c) => {
     try {

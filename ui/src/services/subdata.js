@@ -4,7 +4,7 @@
  * @Date: 2022-07-12 11:21:36
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-16 17:29:46
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 const wsAPI = process.env.REACT_APP_BASE_WS + "";

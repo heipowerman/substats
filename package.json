@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./app",
-    "startui": " cd ui && npm start",
+    "start:ui": " cd ui && npm start",
+    "start:all": " npm start | npm run start:ui",
     "buildui": " cd ui && npm run build",
-    "reset": "npm stop all && node ./app/db-batch/truncate-block-list.js && npm restart all"
+    "reset": "npm stop all && node ./app/db-batch/truncate-block-list.js && npm restart all",
+    "test": "jest"
   },
   "dependencies": {
     "@polkadot/api": "^8.12.2",
@@ -29,5 +31,11 @@
     "serve-favicon": "~2.3.0",
     "session-file-store": "^1.1.2",
     "urlencode": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "jest": "^29.1.2"
   }
 }

@@ -4,7 +4,7 @@
  * @Date: 2022-08-03 11:35:13
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-03 11:36:37
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 const _ = require("lodash");

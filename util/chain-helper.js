@@ -4,7 +4,7 @@
  * @Date: 2022-08-05 14:06:57
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-17 14:06:02
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 const moment = require("moment");

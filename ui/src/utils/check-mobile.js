@@ -4,7 +4,7 @@
  * @Date: 2022-08-10 09:51:03
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-10 11:22:00
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 function isMobile() {

@@ -4,7 +4,7 @@
  * @Date: 2022-07-12 15:39:39
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-09-06 16:12:55
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 const { ApiPromise, WsProvider, Keyring } = require("@polkadot/api");

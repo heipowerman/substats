@@ -4,7 +4,7 @@
  * @Date: 2022-07-11 15:11:35
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-07-21 16:22:16
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 "use strict";

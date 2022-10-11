@@ -4,7 +4,7 @@
  * @Date: 2022-07-11 17:32:07
  * @LastEditors: Jack Chen
  * @LastEditTime: 2022-07-11 20:35:33
- * @description: 描述信息
+ * @description: about
  * @author: Jack Chen @懒人码农
  */
 const { Keyring } = require("@polkadot/api");

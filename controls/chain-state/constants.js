@@ -2,9 +2,9 @@
  * @Description:
  * @Autor: fage
  * @Date: 2022-07-11 15:11:35
- * @LastEditors: chenbinfa
- * @LastEditTime: 2022-07-20 14:06:06
- * @description: 描述信息
+ * @LastEditors: lanmeng656 cbf0311@sina.com
+ * @LastEditTime: 2022-10-11 17:31:10
+ * @description: about
  * @author: chenbinfa
  */
 "use strict";
@@ -24,7 +24,7 @@ module.exports = async function (req, res, next) {
   }
   if (!api.consts[ac1][ac2]) {
     return res.json({
-      msg: "api.consts." + ac1 + "." + ac1 + " not a function",
+      msg: "api.consts." + ac1 + "." + ac2 + " not a function",
     });
   }
   const t = api.consts[ac1][ac2];

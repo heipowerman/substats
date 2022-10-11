@@ -4,7 +4,7 @@
  * @Date: 2022-08-01 17:24:18
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-03 09:39:07
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 export default function ({ hash, title, onClick }) {

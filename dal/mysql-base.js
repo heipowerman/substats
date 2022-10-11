@@ -1,10 +1,10 @@
 "use strict";
 const mysql = require("mysql");
+const webconfig = require("../webconfig");
 let conn = null;
 
 module.exports = class mysqlBase {
   constructor(tableName) {
-    let webconfig = global.webconfig;
     if (!conn) {
       conn = mysql.createPool(webconfig.mysql);
     }

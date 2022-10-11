@@ -4,7 +4,7 @@
  * @Date: 2022-08-10 10:38:48
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-08-10 10:49:31
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 export * from "@utils/format";

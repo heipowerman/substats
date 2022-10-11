@@ -4,7 +4,7 @@
  * @Date: 2022-07-22 11:01:42
  * @LastEditors: chenbinfa
  * @LastEditTime: 2022-07-25 15:11:02
- * @description: 描述信息
+ * @description: about
  * @author: chenbinfa
  */
 import styled from "styled-components";
