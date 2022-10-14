@@ -2,8 +2,8 @@
  * @Description:
  * @Autor: fage
  * @Date: 2022-07-12 15:39:39
- * @LastEditors: chenbinfa
- * @LastEditTime: 2022-09-20 10:46:53
+ * @LastEditors: lanmeng656 cbf0311@sina.com
+ * @LastEditTime: 2022-10-13 17:02:05
  * @description: about
  * @author: chenbinfa
  */
@@ -45,7 +45,7 @@ async function getBlock(value) {
 }
 async function main() {
   api = await init();
-  await getBlock(172808);
+  await getBlock(12460104);
   console.log("complete!");
   process.exit();
 }

@@ -2,8 +2,8 @@
  * @Description:
  * @Autor: fage
  * @Date: 2022-07-11 15:11:36
- * @LastEditors: chenbinfa
- * @LastEditTime: 2022-08-11 11:12:02
+ * @LastEditors: lanmeng656 cbf0311@sina.com
+ * @LastEditTime: 2022-10-13 15:48:45
  * @description: mysql common class
  * @author: chenbinfa
  */
@@ -56,7 +56,7 @@ module.exports = class DalCommon extends MysqlBase {
 
   getAllTableNames() {
     let sql =
-      "select table_name from information_schema.tables where table_schema='crm_woxifang'";
+      "select table_name from information_schema.tables where table_schema='substats-w3f'";
     return super.query(sql);
   }
 };

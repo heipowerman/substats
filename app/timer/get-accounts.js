@@ -2,8 +2,8 @@
  * @Description:
  * @Autor: fage
  * @Date: 2022-07-12 15:39:39
- * @LastEditors: chenbinfa
- * @LastEditTime: 2022-08-17 14:26:43
+ * @LastEditors: lanmeng656 cbf0311@sina.com
+ * @LastEditTime: 2022-10-13 17:33:56
  * @description: auto record everyday power to db
  * @author: chenbinfa
  */
@@ -28,13 +28,17 @@ const moment = require("moment");
 const format = require("../../util/format");
 
 async function main() {
+  console.log("start...");
   api = await init();
+  console.log("init ok");
   if (!api) {
     setTimeout(main, 10000);
     return console.log("ws node connection failed,retry after 10s");
   }
   let result = await api.query.system.account.entries();
+  console.log("result", result);
   let accounts = format.entries(result);
+  console.log("accounts", accounts);
   result = await api.query.sminer.minerItems.entries();
   let miners = format.entries(result);
   for (entity of accounts) {

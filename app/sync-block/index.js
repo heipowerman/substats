@@ -2,8 +2,8 @@
  * @Description:
  * @Autor: fage
  * @Date: 2022-07-12 15:39:39
- * @LastEditors: chenbinfa
- * @LastEditTime: 2022-09-20 10:53:06
+ * @LastEditors: lanmeng656 cbf0311@sina.com
+ * @LastEditTime: 2022-10-14 09:26:15
  * @description: about
  * @author: chenbinfa
  */
@@ -35,7 +35,7 @@ async function getBlock(value) {
   if (typeof value != "number") {
     hash = value;
   } else {
-    console.log("getBlockHash", value);
+    // console.log("getBlockHash", value);
     let result = await api.rpc.chain.getBlockHash(value);
     showLog("getBlockHash success", value);
     hash = result.toHex();
@@ -95,7 +95,7 @@ async function saveTx(blockHash, blockHeight, src, events) {
   }
   showLog("saving blockInfo.extrinsics");
   for (let index in blockInfo.extrinsics) {
-    console.log("saving blockInfo.extrinsics of", index);
+    showLog("saving blockInfo.extrinsics of", index);
     let enx = blockInfo.extrinsics[index];
     try {
       if (typeof enx != "object" || !("toHuman" in enx)) {
@@ -110,6 +110,7 @@ async function saveTx(blockHash, blockHeight, src, events) {
       //   continue;
       // }
       if (saveTxMethods.indexOf(json.method.method) == -1) {
+        // console.log("跳过：", json.method.method);
         continue;
       }
       let entity = {
@@ -230,10 +231,12 @@ async function main() {
   if (tmp.length > 0) {
     currHeight = tmp[0].blockHeight + 1;
   }
+  // currHeight = 12460103;
+  // console.log("currHeight", currHeight);
   if (maxHeight < currHeight) {
     maxHeight = currHeight + 1;
   }
-  console.log("currHeight", currHeight);
+
   // return;
   while (true) {
     currHeight = await startDo(currHeight, maxHeight);
@@ -245,17 +248,21 @@ async function main() {
   process.exit();
 }
 async function startDo(start, end) {
+  let index = 0;
   for (let i = start; i < end; i++) {
     try {
       await getBlock(i);
     } catch (e) {
+      api = await init();
+      break;
       console.error(e);
     }
+    index = i;
   }
-  return end;
+  return index;
 }
 
 function showLog(...msg) {
-  console.log(...msg);
+  // console.log(...msg);
 }
 main();
