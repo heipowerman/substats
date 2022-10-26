@@ -15,6 +15,16 @@ We have designed a set of explorer modular components for the Substrate ecosyste
 
 ● **Open source and security**: Substats only provides completely open source code, and is not responsible for replacing management and operation services. All services are deployed and operated by the project party, avoiding trust costs.
 
+### More documents
+
+- [about-system](./documents/about-system.md)
+- [about-framework](./documents/about-framework.md)
+- [api-docs](./documents/api-docs.md)
+- [database-init](./documents/database-init.sql)
+- [about-ui](./documents/about-ui.md)
+- [about-components](./documents/about-components.md)
+- [testing-guide](./documents/testing-guide.md)
+
 
 ## 2. Technology stack used
 
@@ -36,8 +46,8 @@ We have designed a set of explorer modular components for the Substrate ecosyste
 ## 3. Install guide
 
 ### 1) Install database
-- create a database with name "substats";
-- run the sql file /db-init.sql
+- create a database with name "substats-w3f";
+- run the sql file [database-init](./documents/database-init.sql)
 - make database config file and content as:
 ```
 {
@@ -80,29 +90,36 @@ yarn run start
 ### 2) Run frontend UI
 
 ```
-npm run startui
+npm run start:ui
 // or
-yarn run startui
+yarn run start:ui
 ```
 
 ## 5. Project file structure
 
 ```
-├── app #  timer app
-├── package.json
-├── bll             # business
-├── controls # control layer
-├── dal  # data Access Layer
-├── routes        # server routes
-├── ui  # web ui (react)
-│   ├── build/ # builded file
-│   ├── public/    # static asset
-│   ├── src/       # react source code
-├── .gitignore      # git ignore file
-├── app.js   # server main
-├── mysql-config.js   # db config
-└── web.config # server config
+├── app/                #  timer app
+├── package.json        #  package
+├── bll/                # business
+├── controls/           # control layer
+├── dal/                # data Access Layer
+├── routes/             # server routes
+├── ui                  # web ui (react)
+│   ├── build/          # builded file
+│   ├── public/         # static asset
+│   ├── src/            # react source code
+├── .gitignore          # git ignore file
+├── app.js              # server main
+└── web.config          # server config
 ```
 
 ## Grants program
 https://github.com/CESSProject/Grants-Program/blob/master/applications/substats.md
+
+系统简介文档 （绪）
+系统架构介绍文档
+组件说明文档
+UI框架说明文档
+API文明文档 （绪）
+数据库创建脚本
+测试引导文档
