@@ -53,30 +53,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false, limit: "10000kb" }));
 app.use(cookieParser());
 app.use(sessionHelper());
-// http跳转到https
-// app.all('*',function (req, res, next) {
-//     if (req.headers.host!='localhost'&&req.protocol=='http') {
-//         console.log('跳转：',req.url);
-//         res.redirect('https://'+req.headers.host+req.url);
-//     }
-//     else {
-//         next();
-//     }
-// });
-// app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "ui/build")));
 
 app.use("/", routes);
 app.use("/api", api);
 app.ws("/ws", ws);
-//管理员登录
-// app.post('/login/', bll_admin.login);
-//管理员退出
-// app.get("/logout/", bll_admin.logout);
-
-// app.use('/api', api);
-
-// catch 404 and forward to error handler
 app.use(function (req, res, next) {
   var err = new Error("Not Found");
   err.status = 404;

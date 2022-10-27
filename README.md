@@ -116,10 +116,3 @@ yarn run start:ui
 ## Grants program
 https://github.com/CESSProject/Grants-Program/blob/master/applications/substats.md
 
-系统简介文档 （绪）
-系统架构介绍文档
-组件说明文档
-UI框架说明文档
-API文明文档 （绪）
-数据库创建脚本
-测试引导文档
