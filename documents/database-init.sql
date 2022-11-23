@@ -19,15 +19,6 @@
 CREATE DATABASE IF NOT EXISTS `substats-w3f` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `substats-w3f`;
 
--- export tablesubstats-w3f.sessions structure
-CREATE TABLE IF NOT EXISTS `sessions` (
-  `session_id` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `expires` int(11) unsigned NOT NULL,
-  `data` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
-  PRIMARY KEY (`session_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
 
 -- export tablesubstats-w3f.tb_block_account structure
 CREATE TABLE IF NOT EXISTS `tb_block_account` (
@@ -168,17 +159,6 @@ CREATE TABLE IF NOT EXISTS `tb_miner_summary` (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `beneficiaryAccount` (`beneficiaryAccount`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='summary list of miner';
-
-
-
--- export tablesubstats-w3f.tb_storage_power_trend structure
-CREATE TABLE IF NOT EXISTS `tb_storage_power_trend` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `power` bigint(20) NOT NULL DEFAULT '0',
-  `dateStr` varchar(50) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE KEY `dateStr` (`dateStr`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='power';
 
 
 
