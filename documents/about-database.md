@@ -5,7 +5,7 @@
 
 ## 如何导入
 
-使用Mysql管理工具链接你的数据库引擎，然后执行本目录下的 database-init.sql 文件即可导入一个完整数据库。
+使用Mysql管理工具链接你的数据库引擎，然后执行本目录下的 [database-init.sql](database-init.sql) 文件即可导入一个完整数据库。
 
 > 注：数据库引擎版本建议使用 mysql-v5.7
 
